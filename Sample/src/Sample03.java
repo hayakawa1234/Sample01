@@ -38,21 +38,21 @@ class CoinCase {
 	public void AddCoins(int sort, int num) {
 		if (sort == 500) {
 			coin500 = coin500 + num;
-		} else if(sort == 100) {
+		} else if (sort == 100) {
 			coin100 = coin100 + num;
-		}else if(sort == 50) {
+		} else if (sort == 50) {
 			coin50 = coin50 + num;
-		}else if(sort == 10) {
+		} else if (sort == 10) {
 			coin10 = coin10 + num;
-		}else if(sort == 5) {
+		} else if (sort == 5) {
 			coin5 = coin5 + num;
-		}else {
+		} else {
 			coin1 = coin1 + num;
 		}
 	}
 
 	public int GetCount(int sort) {
-		return ;
+		return coin100;
 	}
 
 	public int GetAmount() {
@@ -65,7 +65,7 @@ public class Sample03 {
 	public static void main(String[] args) {
 		CoinCase coinCase = new CoinCase();
 		int amount;
-		
+
 		amount = coinCase.GetAmount();
 		System.out.println("合計値は" + amount + "円です");
 
@@ -76,7 +76,7 @@ public class Sample03 {
 		coinCase.AddCoins(100, 2);
 		amount = coinCase.GetAmount();
 		System.out.println("合計値は" + amount + "円です");
-		
+
 		coinCase.AddCoins(50, 4);
 		amount = coinCase.GetAmount();
 		System.out.println("合計値は" + amount + "円です");
@@ -84,11 +84,11 @@ public class Sample03 {
 		coinCase.AddCoins(10, 3);
 		amount = coinCase.GetAmount();
 		System.out.println("合計値は" + amount + "円です");
-		
+
 		coinCase.AddCoins(5, 4);
 		amount = coinCase.GetAmount();
 		System.out.println("合計値は" + amount + "円です");
-		
+
 		coinCase.AddCoins(1, 3);
 		amount = coinCase.GetAmount();
 		System.out.println("合計値は" + amount + "円です");
@@ -97,7 +97,20 @@ public class Sample03 {
 		count = coinCase.GetCount(500);
 		System.out.println(count + "枚です");
 		
+		count = coinCase.GetCount(100);
+		System.out.println(count + "枚です");
 		
+		count = coinCase.GetCount(50);
+		System.out.println(count + "枚です");
+		
+		count = coinCase.GetCount(10);
+		System.out.println(count + "枚です");
+		
+		count = coinCase.GetCount(5);
+		System.out.println(count + "枚です");
+		
+		count = coinCase.GetCount(1);
+		System.out.println(count + "枚です");
 
 	}
 }
