@@ -53,19 +53,19 @@ class CoinCase {
 	}
 
 	public int GetCount(int sort) {
-		if(sort == 500) {
+		if (sort == 500) {
 			return coin500;
-		}else if(sort == 100) {
+		} else if (sort == 100) {
 			return coin100;
-		}else if(sort == 50) {
+		} else if (sort == 50) {
 			return coin50;
-		}else if(sort == 10) {
+		} else if (sort == 10) {
 			return coin10;
-		}else if(sort == 5) {
+		} else if (sort == 5) {
 			return coin5;
-		}else if (sort == 1) {
+		} else if (sort == 1) {
 			return coin1;
-		}else {
+		} else {
 			return 0;
 		}
 	}
@@ -78,6 +78,7 @@ class CoinCase {
 public class Sample03 {
 
 	public static void main(String[] args) {
+
 		CoinCase coinCase = new CoinCase();
 		int amount;
 
@@ -121,5 +122,44 @@ public class Sample03 {
 		count = coinCase.GetCount(1);
 		System.out.println(count + "–‡‚Å‚·");
 
+		/**
+		 * CoinCase ƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ğì¬‚·‚éB í—Ş‚Æ–‡”‚ğ“ü—Í‚µAAddCoins ƒƒ\ƒbƒh‚Åd‰İ‚ğ’Ç‰Á‚·‚é‚±‚Æ‚ğ 10 ‰ñŒJ‚è•Ô‚·B
+		 * Šed‰İ‚ª‰½–‡‚ ‚é‚©‚ğ•\¦‚·‚éB ‘Šz‚ğ•\¦‚·‚éB ¦ d‰İ‚Ìí—Ş‚Í 500 ‰~‚È‚ç®”‚Ì 500A100 ‰~‚È‚ç 100
+		 * ‚Æ‚µAŠY“–‚µ‚È‚¢”‚ªw’è‚³‚ê‚½ê‡‚É‚Í–³‹‚·‚éB
+		 */
+
+		for (int i = 0; i < 10; i++) {
+			coinCase.AddCoins(500, 2);
+
+			coinCase.AddCoins(100, 3);
+
+			coinCase.AddCoins(50, 6);
+
+			coinCase.AddCoins(10, 5);
+
+			coinCase.AddCoins(5, 4);
+
+			coinCase.AddCoins(1, 1);
+		}
+
+		int count1;
+		count1 = coinCase.GetCount(500);
+		System.out.println("500‰~‹Ê‚Í" + count1 + "–‡‚Å‚·");
+		count1 = coinCase.GetCount(100);
+		System.out.println("100‰~‹Ê‚Í" + count1 + "–‡‚Å‚·");
+		count1 = coinCase.GetCount(50);
+		System.out.println("50‰~‹Ê‚Í" + count1 + "–‡‚Å‚·");
+		count1 = coinCase.GetCount(10);
+		System.out.println("10‰~‹Ê‚Í" + count1 + "–‡‚Å‚·");
+		count1 = coinCase.GetCount(5);
+		System.out.println("5‰~‹Ê‚Í" + count1 + "–‡‚Å‚·");
+		count1 = coinCase.GetCount(1);
+		System.out.println("1‰~‹Ê‚Í" + count1 + "–‡‚Å‚·");
+
+		int amount1;
+		amount1 = coinCase.GetAmount();
+		System.out.println("‘Šz‚Í" + amount1 + "‰~‚Å‚·");
+
 	}
+
 }
