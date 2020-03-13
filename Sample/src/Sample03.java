@@ -28,12 +28,12 @@ import java.util.List;
  */
 
 class CoinCase {
-	int coin500 = 4;
-	int coin100 = 2;
-	int coin50 = 3;
-	int coin10 = 2;
-	int coin5 = 5;
-	int coin1 = 3;
+	int coin500 = 0;
+	int coin100 = 0;
+	int coin50 = 0;
+	int coin10 = 0;
+	int coin5 = 0;
+	int coin1 = 0;
 
 	public void AddCoins(int sort, int num) {
 
