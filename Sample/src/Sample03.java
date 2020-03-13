@@ -36,6 +36,7 @@ class CoinCase {
 	int coin1 = 3;
 
 	public void AddCoins(int sort, int num) {
+
 		if (sort == 500) {
 			coin500 = coin500 + num;
 		} else if (sort == 100) {
@@ -52,7 +53,21 @@ class CoinCase {
 	}
 
 	public int GetCount(int sort) {
-		return coin100;
+		if(sort == 500) {
+			return coin500;
+		}else if(sort == 100) {
+			return coin100;
+		}else if(sort == 50) {
+			return coin50;
+		}else if(sort == 10) {
+			return coin10;
+		}else if(sort == 5) {
+			return coin5;
+		}else if (sort == 1) {
+			return coin1;
+		}else {
+			return 0;
+		}
 	}
 
 	public int GetAmount() {
@@ -67,48 +82,42 @@ public class Sample03 {
 		int amount;
 
 		amount = coinCase.GetAmount();
-		System.out.println("‡Œv’l‚Í" + amount + "‰~‚Å‚·");
 
 		coinCase.AddCoins(500, 3);
 		amount = coinCase.GetAmount();
-		System.out.println("‡Œv’l‚Í" + amount + "‰~‚Å‚·");
 
 		coinCase.AddCoins(100, 2);
 		amount = coinCase.GetAmount();
-		System.out.println("‡Œv’l‚Í" + amount + "‰~‚Å‚·");
 
 		coinCase.AddCoins(50, 4);
 		amount = coinCase.GetAmount();
-		System.out.println("‡Œv’l‚Í" + amount + "‰~‚Å‚·");
 
 		coinCase.AddCoins(10, 3);
 		amount = coinCase.GetAmount();
-		System.out.println("‡Œv’l‚Í" + amount + "‰~‚Å‚·");
 
 		coinCase.AddCoins(5, 4);
 		amount = coinCase.GetAmount();
-		System.out.println("‡Œv’l‚Í" + amount + "‰~‚Å‚·");
 
 		coinCase.AddCoins(1, 3);
 		amount = coinCase.GetAmount();
-		System.out.println("‡Œv’l‚Í" + amount + "‰~‚Å‚·");
+		System.out.println("‘Šz" + amount + "‰~‚Å‚·");
 
 		int count;
 		count = coinCase.GetCount(500);
 		System.out.println(count + "–‡‚Å‚·");
-		
+
 		count = coinCase.GetCount(100);
 		System.out.println(count + "–‡‚Å‚·");
-		
+
 		count = coinCase.GetCount(50);
 		System.out.println(count + "–‡‚Å‚·");
-		
+
 		count = coinCase.GetCount(10);
 		System.out.println(count + "–‡‚Å‚·");
-		
+
 		count = coinCase.GetCount(5);
 		System.out.println(count + "–‡‚Å‚·");
-		
+
 		count = coinCase.GetCount(1);
 		System.out.println(count + "–‡‚Å‚·");
 
