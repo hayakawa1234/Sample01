@@ -128,19 +128,19 @@ public class Sample03 {
 		 * ‚Æ‚µAŠY“–‚µ‚È‚¢”‚ªw’è‚³‚ê‚½ê‡‚É‚Í–³‹‚·‚éB
 		 */
 
-		for (int i = 0; i < 10; i++) {
-			coinCase.AddCoins(500, 2);
-
-			coinCase.AddCoins(100, 3);
-
-			coinCase.AddCoins(50, 6);
-
-			coinCase.AddCoins(10, 5);
-
-			coinCase.AddCoins(5, 4);
-
-			coinCase.AddCoins(1, 1);
-		}
+		
+		  for (int i = 0; i < 10; i++) { coinCase.AddCoins(500, 2);
+		  
+		  coinCase.AddCoins(100, 3);
+		  
+		  coinCase.AddCoins(50, 6);
+		  
+		  coinCase.AddCoins(10, 5);
+		  
+		  coinCase.AddCoins(5, 4);
+		  
+		  coinCase.AddCoins(1, 1); }
+		 
 
 		int count1;
 		count1 = coinCase.GetCount(500);
