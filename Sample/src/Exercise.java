@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Collections;
 
 class Deck {
 	public List<Card> Cards;
@@ -115,14 +116,12 @@ class Deck {
 		cards.add(card52);
 		cards.add(card53);
 		cards.add(card54);
-		for (int i = 0; i < cards.size(); i++) {
-			cards.get(i);
-			Cards = cards;
-	}
+
+		Cards = cards;
 	}
 
 	public Card draw() {
-		return Cards.remove(3); 
+		return Cards.remove(0);
 	}
 
 	public void put(Card card) {
@@ -130,7 +129,14 @@ class Deck {
 	}
 
 	public void shuffle() {
-		System.out.println();
+		Collections.shuffle(Cards);
+		for (Card shuffledeck : Cards) {
+			System.out.println(shuffledeck.getNumber() + shuffledeck.getMark());
+		}
+	}
+
+	public int size() {
+		return 54;
 	}
 
 }
@@ -158,11 +164,15 @@ public class Exercise {
 
 	public static void main(String[] args) {
 		Deck deck = new Deck();
-		Card drowcard = deck.draw();
-		String number = drowcard.getNumber();
-		String mark = drowcard.getMark();
-		System.out.println(number + "," + mark);
-		System.out.println(" ");
-		
+		for (int i = 0; i < deck.size(); i++) {
+			Card drowcard = deck.draw();
+			String number = drowcard.getNumber();
+			String mark = drowcard.getMark();
+			System.out.println(number + "," + mark);
+			System.out.println(" ");
+			deck.put(drowcard);
+			deck.shuffle();
+			System.out.println(" ");
+		}
 	}
 }
