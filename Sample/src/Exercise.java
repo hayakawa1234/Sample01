@@ -2,60 +2,10 @@ import java.util.*;
 
 class Deck {
 	public List<Card> Cards;
+	public Card Put;
 
 	Deck() {
 		List<Card> cards = new ArrayList<Card>();
-		Card card1 = new Card(1, "spede");
-		Card card2 = new Card(1, "heart");
-		Card card3 = new Card(1, "clover");
-		Card card4 = new Card(1, "dia");
-		cards.add(card1);
-		cards.add(card2);
-		cards.add(card3);
-		cards.add(card4);
-		Cards = cards;
-
-	}
-
-	public Card draw() {
-
-		return Cards.get(2);
-
-	}
-}
-
-class Card {
-	public String Mark;
-	public int Number;
-
-	Card(int num, String ma) {
-		Number = num;
-		Mark = ma;
-	}
-
-	public String getNumber() {
-		String s = String.valueOf(Number);
-		return s;
-	}
-
-	public String getMark() {
-		return Mark;
-	}
-
-}
-
-public class Exercise {
-
-	public static void main(String[] args) {
-		Deck deck = new Deck();
-		Card drowcard = deck.draw();
-
-		String number = drowcard.getNumber();
-		String mark = drowcard.getMark();
-		System.out.println(number + "," + mark);
-
-		List<Card> cards = new ArrayList<Card>();
-
 		Card card1 = new Card(1, "spede");
 		Card card2 = new Card(1, "heart");
 		Card card3 = new Card(1, "clover");
@@ -165,13 +115,54 @@ public class Exercise {
 		cards.add(card52);
 		cards.add(card53);
 		cards.add(card54);
-
 		for (int i = 0; i < cards.size(); i++) {
-			Card card = cards.get(i);
-			number = card.getNumber();
-			mark = card.getMark();
-			System.out.println(number + "," + mark);
-		}
+			cards.get(i);
+			Cards = cards;
+	}
+	}
 
+	public Card draw() {
+		return Cards.remove(3); 
+	}
+
+	public void put(Card card) {
+		Put = card;
+	}
+
+	public void shuffle() {
+		System.out.println();
+	}
+
+}
+
+class Card {
+	public String Mark;
+	public int Number;
+
+	Card(int num, String ma) {
+		Number = num;
+		Mark = ma;
+	}
+
+	public String getNumber() {
+		String s = String.valueOf(Number);
+		return s;
+	}
+
+	public String getMark() {
+		return Mark;
+	}
+}
+
+public class Exercise {
+
+	public static void main(String[] args) {
+		Deck deck = new Deck();
+		Card drowcard = deck.draw();
+		String number = drowcard.getNumber();
+		String mark = drowcard.getMark();
+		System.out.println(number + "," + mark);
+		System.out.println(" ");
+		
 	}
 }
