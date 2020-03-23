@@ -194,6 +194,7 @@ public class Exercise {
 
 		{
 
+			System.out.println(" ");
 			System.out.println("トランプを1枚引く");
 			Deck deck = new Deck();
 			Card drawcard = deck.draw();
@@ -208,18 +209,44 @@ public class Exercise {
 
 		}
 
-		System.out.println("55枚カードを引く");
-		Deck deck = new Deck();
-		for (int i = 0; i < 55; i++) {
-			Card drawcard = deck.draw();
-			if(drawcard == null) {
-			System.out.println("引くカードがありません！");
-			}
-			String number = drawcard.getNumber();
-			String mark = drawcard.getMark();
-			System.out.println(number + "," + mark);
-		}
-		
-	}
+		{
 
+			System.out.println(" ");
+			System.out.println("55枚カードを引く");
+			Deck deck = new Deck();
+			for (int i = 0; i < 55; i++) {
+				Card drawcard = deck.draw();
+				if (drawcard == null) {
+					System.out.println("引くカードがありません！");
+				} else {
+					String number = drawcard.getNumber();
+					String mark = drawcard.getMark();
+					System.out.println(number + "," + mark);
+				}
+			}
+		}
+
+		{
+			System.out.println(" ");
+			System.out.println("数字を絵柄に変える");
+			Deck deck = new Deck();
+			for (int i = 0; i < 54; i++) {
+				Card drawcard = deck.draw();
+				String number = drawcard.getNumber();
+				String mark = drawcard.getMark();
+				if (number == "11") {
+					number = "jack";
+				} else if (number == "12") {
+					number = "queen";
+				} else if (number == "13") {
+					number = "king";
+				} else if (number == "14") {
+					number = "joker";
+				}
+				System.out.println(number + "," + mark);
+			}
+
+		}
+
+	}
 }
