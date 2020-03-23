@@ -125,14 +125,15 @@ class Deck {
 	}
 
 	public void put(Card card) {
-		Put = card;
+		Cards.add(0, card);
+	}
+	
+	public void add(Card card) {
+		Cards.add(card);
 	}
 
 	public void shuffle() {
-		Collections.shuffle(Cards);
-		for (Card shuffledeck : Cards) {
-			System.out.println(shuffledeck.getNumber() + shuffledeck.getMark());
-		}
+		 Collections.shuffle(Cards);
 	}
 
 	public int size() {
@@ -163,16 +164,44 @@ class Card {
 public class Exercise {
 
 	public static void main(String[] args) {
-		Deck deck = new Deck();
-		for (int i = 0; i < deck.size(); i++) {
+		{
+			System.out.println("トランプを引く ");
+			Deck deck = new Deck();
+			for (int i = 0; i < deck.size(); i++) {
+				Card drowcard = deck.draw();
+				String number = drowcard.getNumber();
+				String mark = drowcard.getMark();
+				System.out.println(number + "," + mark);
+			}
+		}
+
+		{
+
+			System.out.println("シャッフルしたトランプを引く");
+			Deck deck = new Deck();
+			deck.shuffle();
+			for (int i = 0; i < deck.size(); i++) {
+				Card drowcard = deck.draw();
+				String number = drowcard.getNumber();
+				String mark = drowcard.getMark();
+				System.out.println(number + "," + mark);
+			}
+		}
+
+		{
+
+			System.out.println("トランプを1枚引く");
+			Deck deck = new Deck();
 			Card drowcard = deck.draw();
 			String number = drowcard.getNumber();
 			String mark = drowcard.getMark();
 			System.out.println(number + "," + mark);
-			System.out.println(" ");
 			deck.put(drowcard);
-			deck.shuffle();
-			System.out.println(" ");
+			Card drowcard1 = deck.draw();
+			String number1 = drowcard1.getNumber();
+			String mark1 = drowcard1.getMark();
+			System.out.println(number1 + "," + mark1);
+			
 		}
 	}
 }
