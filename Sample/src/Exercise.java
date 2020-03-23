@@ -3,7 +3,6 @@ import java.util.Collections;
 
 class Deck {
 	public List<Card> Cards;
-	public Card Put;
 
 	Deck() {
 		List<Card> cards = new ArrayList<Card>();
@@ -121,19 +120,24 @@ class Deck {
 	}
 
 	public Card draw() {
-		return Cards.remove(0);
+		if (Cards.size() > 0) {
+			return Cards.remove(0);
+		} else {
+			return null;
+		}
+
 	}
 
 	public void put(Card card) {
 		Cards.add(0, card);
 	}
-	
+
 	public void add(Card card) {
 		Cards.add(card);
 	}
 
 	public void shuffle() {
-		 Collections.shuffle(Cards);
+		Collections.shuffle(Cards);
 	}
 
 	public int size() {
@@ -168,9 +172,9 @@ public class Exercise {
 			System.out.println("トランプを引く ");
 			Deck deck = new Deck();
 			for (int i = 0; i < deck.size(); i++) {
-				Card drowcard = deck.draw();
-				String number = drowcard.getNumber();
-				String mark = drowcard.getMark();
+				Card drawcard = deck.draw();
+				String number = drawcard.getNumber();
+				String mark = drawcard.getMark();
 				System.out.println(number + "," + mark);
 			}
 		}
@@ -181,9 +185,9 @@ public class Exercise {
 			Deck deck = new Deck();
 			deck.shuffle();
 			for (int i = 0; i < deck.size(); i++) {
-				Card drowcard = deck.draw();
-				String number = drowcard.getNumber();
-				String mark = drowcard.getMark();
+				Card drawcard = deck.draw();
+				String number = drawcard.getNumber();
+				String mark = drawcard.getMark();
 				System.out.println(number + "," + mark);
 			}
 		}
@@ -192,16 +196,30 @@ public class Exercise {
 
 			System.out.println("トランプを1枚引く");
 			Deck deck = new Deck();
-			Card drowcard = deck.draw();
-			String number = drowcard.getNumber();
-			String mark = drowcard.getMark();
+			Card drawcard = deck.draw();
+			String number = drawcard.getNumber();
+			String mark = drawcard.getMark();
 			System.out.println(number + "," + mark);
-			deck.put(drowcard);
-			Card drowcard1 = deck.draw();
-			String number1 = drowcard1.getNumber();
-			String mark1 = drowcard1.getMark();
+			deck.put(drawcard);
+			Card drawcard1 = deck.draw();
+			String number1 = drawcard1.getNumber();
+			String mark1 = drawcard1.getMark();
 			System.out.println(number1 + "," + mark1);
-			
+
 		}
+
+		System.out.println("55枚カードを引く");
+		Deck deck = new Deck();
+		for (int i = 0; i < 55; i++) {
+			Card drawcard = deck.draw();
+			if(drawcard == null) {
+			System.out.println("引くカードがありません！");
+			}
+			String number = drawcard.getNumber();
+			String mark = drawcard.getMark();
+			System.out.println(number + "," + mark);
+		}
+		
 	}
+
 }
