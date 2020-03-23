@@ -157,7 +157,17 @@ class Card {
 
 	public String getNumber() {
 		String s = String.valueOf(Number);
+		if (Number == 11) {
+			s = "jack";
+		} else if (Number == 12) {
+			s = "queen";
+		} else if (Number == 13) {
+			s = "king";
+		} else if (Number == 14) {
+			s = "joker";
+		}
 		return s;
+
 	}
 
 	public String getMark() {
@@ -234,15 +244,6 @@ public class Exercise {
 				Card drawcard = deck.draw();
 				String number = drawcard.getNumber();
 				String mark = drawcard.getMark();
-				if (number == "11") {
-					number = "jack";
-				} else if (number == "12") {
-					number = "queen";
-				} else if (number == "13") {
-					number = "king";
-				} else if (number == "14") {
-					number = "joker";
-				}
 				System.out.println(number + "," + mark);
 			}
 
