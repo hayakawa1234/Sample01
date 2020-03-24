@@ -140,10 +140,10 @@ class Deck {
 		Collections.shuffle(Cards);
 	}
 
-	public int size() {
-		return 54;
+	public int size(int n) {
+		n = Cards.size();
+		return n;
 	}
-
 }
 
 class Card {
@@ -181,7 +181,7 @@ public class Exercise {
 		{
 			System.out.println("トランプを引く ");
 			Deck deck = new Deck();
-			for (int i = 0; i < deck.size(); i++) {
+			for (int i = 0; i < deck.size(i); i++) {
 				Card drawcard = deck.draw();
 				String number = drawcard.getNumber();
 				String mark = drawcard.getMark();
@@ -194,7 +194,7 @@ public class Exercise {
 			System.out.println("シャッフルしたトランプを引く");
 			Deck deck = new Deck();
 			deck.shuffle();
-			for (int i = 0; i < deck.size(); i++) {
+			for (int i = 0; i < deck.size(i); i++) {
 				Card drawcard = deck.draw();
 				String number = drawcard.getNumber();
 				String mark = drawcard.getMark();
@@ -247,6 +247,16 @@ public class Exercise {
 				System.out.println(number + "," + mark);
 			}
 
+		}
+		{
+			System.out.println(" ");
+			System.out.println("サイズを変更する");
+			Deck deck = new Deck();
+			for (int i = 0; i < 54; i++) {
+				int size = deck.size(i);
+				System.out.println(size);
+				deck.draw();
+			}
 		}
 
 	}
