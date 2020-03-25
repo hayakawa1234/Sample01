@@ -92,5 +92,29 @@ public class Exercise {
 			System.out.println(number + "," + mark);
 		}
 
+		{
+			System.out.println(" ");
+			System.out.println("ƒJ[ƒh”äŠr‚ð‚·‚é");
+			Deck deck = new Deck();
+			deck.shuffle();
+			Card drawcard1 = deck.draw();
+			String number1 = drawcard1.getNumber();
+			String mark1 = drawcard1.getMark();
+			System.out.println(number1 + "," + mark1);
+			deck.shuffle();
+			Card drawcard2 = deck.draw();
+			String number2 = drawcard2.getNumber();
+			String mark2 = drawcard2.getMark();
+			System.out.println(number2 + "," + mark2);
+			drawcard1.compareTo(drawcard2);
+			int com = drawcard1.compareTo(drawcard2);
+			if (com > 0) {
+				System.out.println(number1 + "," + mark1 + "‚ª‹­‚¢");
+			} else if (com < 0) {
+				System.out.println(number2 + "," + mark2 + "‚ª‹­‚¢");
+			} else {
+				System.out.println("“¯‚¶‹­‚³‚Å‚·");
+			}
+		}
 	}
 }

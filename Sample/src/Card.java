@@ -18,6 +18,8 @@ public class Card {
 			s = "queen";
 		} else if (Number == 13) {
 			s = "king";
+		} else if (Number == 14) {
+			s = "joker";
 		}
 		return s;
 
@@ -31,4 +33,16 @@ public class Card {
 		return new Card(14, "joker");
 	}
 
+	int compareTo(Card anotherCard) {
+		int num1 = this.Number;
+		int num2 = anotherCard.Number;
+
+		if (num1 > num2) {
+			return 1;
+		} else if (num1 < num2) {
+			return -1;
+		} else {
+			return 0;
+		}
+	}
 }
