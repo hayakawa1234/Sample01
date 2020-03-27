@@ -128,9 +128,9 @@ public class Exercise {
 			System.out.println(" ");
 			System.out.println("カードを5枚引いて最も強いカードを表示する");
 
-			Card drawcard1 = new Card(13, "dia");
+			Card drawcard1 = new Card(5, "dia");
 			Card drawcard2 = new Card(6, "spade");
-			Card drawcard3 = new Card(7, "spade");
+			Card drawcard3 = new Card(13, "spade");
 			Card drawcard4 = new Card(10, "heart");
 
 			List<Card> cardList = new ArrayList<Card>();
@@ -142,7 +142,19 @@ public class Exercise {
 
 			for (int i = 0; i < cardList.size(); i++) {
 				Card card = cardList.get(i);
-				System.out.println(card.getNumber() + "," + card.getMark());
+
+				boolean result = true;
+				for (int j =0; j < cardList.size(); j++) {
+					Card anothercard = cardList.get(j);
+					int compare = card.compareTo(anothercard);
+					if(compare < 0) result = false;
+				}
+				if(result != false) {
+					String num = card.getNumber();
+					String mark = card.getMark();
+					System.out.println(num + "," + mark);
+				}
+				
 			}
 		}
 	}
