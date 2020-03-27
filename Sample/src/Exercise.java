@@ -140,11 +140,9 @@ public class Exercise {
 			cardList.add(drawcard3);
 			cardList.add(drawcard4);
 
-			for (int i = 0; i <= 3; i++) {
+			for (int i = 0; i < cardList.size(); i++) {
 				Card card = cardList.get(i);
-				String num = card.getNumber();
-				String mark = card.getMark();
-				System.out.println(num + "," + mark);
+				System.out.println(card.getNumber() + "," + card.getMark());
 			}
 		}
 	}
