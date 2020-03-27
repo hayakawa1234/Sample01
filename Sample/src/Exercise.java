@@ -133,55 +133,68 @@ public class Exercise {
 			Card drawcard3 = new Card(7, "spade");
 			Card drawcard4 = new Card(10, "heart");
 
-			int num1_2 = drawcard1.compareTo(drawcard2);
-			System.out.println(num1_2);
-			int num1_3 = drawcard1.compareTo(drawcard3);
-			System.out.println(num1_3);
-			int num1_4 = drawcard1.compareTo(drawcard4);
-			System.out.println(num1_4);
-			int num2_1 = drawcard2.compareTo(drawcard1);
-			System.out.println(num2_1);
-			int num2_3 = drawcard2.compareTo(drawcard3);
-			System.out.println(num2_3);
-			int num2_4 = drawcard2.compareTo(drawcard4);
-			System.out.println(num2_4);
-			int num3_1 = drawcard3.compareTo(drawcard1);
-			System.out.println(num3_1);
-			int num3_2 = drawcard3.compareTo(drawcard2);
-			System.out.println(num3_2);
-			int num3_4 = drawcard3.compareTo(drawcard4);
-			System.out.println(num3_4);
-			int num4_1 = drawcard4.compareTo(drawcard1);
-			System.out.println(num4_1);
-			int num4_2 = drawcard4.compareTo(drawcard2);
-			System.out.println(num4_2);
-			int num4_3 = drawcard4.compareTo(drawcard3);
-			System.out.println(num4_3);
+			List<Card> cardList = new ArrayList<Card>();
 
-			if ((num1_2 >= 0) && (num1_3 >= 0) && (num1_4 >= 0)) {
-				String number1 = drawcard1.getNumber();
-				String mark1 = drawcard1.getMark();
-				System.out.println(number1 + "," + mark1);
+			cardList.add(drawcard1);
+			cardList.add(drawcard2);
+			cardList.add(drawcard3);
+			cardList.add(drawcard4);
+
+			for (int i = 0; i <= 3; i++) {
+				Card card = cardList.get(i);
+				String num = card.getNumber();
+				String mark = card.getMark();
+				System.out.println(num + "," + mark);
 			}
-
-			if ((num2_1 >= 0) && (num2_3 >= 0) && (num2_4 >= 0)) {
-				String number2 = drawcard2.getNumber();
-				String mark2 = drawcard2.getMark();
-				System.out.println(number2 + "," + mark2);
-			}
-
-			if ((num3_1 >= 0) && (num3_2 >= 0) && (num3_4 >= 0)) {
-				String number3 = drawcard3.getNumber();
-				String mark3 = drawcard3.getMark();
-				System.out.println(number3 + "," + mark3);
-			}
-
-			if ((num4_1 >= 0) && (num4_2 >= 0) && (num4_3 >= 0)) {
-				String number4 = drawcard4.getNumber();
-				String mark4 = drawcard4.getMark();
-				System.out.println(number4 + "," + mark4);
-			}
-
 		}
 	}
 }
+
+//			int num1_2 = drawcard1.compareTo(drawcard2);
+//			System.out.println(num1_2);
+//			int num1_3 = drawcard1.compareTo(drawcard3);
+//			System.out.println(num1_3);
+//			int num1_4 = drawcard1.compareTo(drawcard4);
+//			System.out.println(num1_4);
+//			int num2_1 = drawcard2.compareTo(drawcard1);
+//			System.out.println(num2_1);
+//			int num2_3 = drawcard2.compareTo(drawcard3);
+//			System.out.println(num2_3);
+//			int num2_4 = drawcard2.compareTo(drawcard4);
+//			System.out.println(num2_4);
+//			int num3_1 = drawcard3.compareTo(drawcard1);
+//			System.out.println(num3_1);
+//			int num3_2 = drawcard3.compareTo(drawcard2);
+//			System.out.println(num3_2);
+//			int num3_4 = drawcard3.compareTo(drawcard4);
+//			System.out.println(num3_4);
+//			int num4_1 = drawcard4.compareTo(drawcard1);
+//			System.out.println(num4_1);
+//			int num4_2 = drawcard4.compareTo(drawcard2);
+//			System.out.println(num4_2);
+//			int num4_3 = drawcard4.compareTo(drawcard3);
+//			System.out.println(num4_3);
+//
+//			if ((num1_2 >= 0) && (num1_3 >= 0) && (num1_4 >= 0)) {
+//				String number1 = drawcard1.getNumber();
+//				String mark1 = drawcard1.getMark();
+//				System.out.println(number1 + "," + mark1);
+//			}
+//
+//			if ((num2_1 >= 0) && (num2_3 >= 0) && (num2_4 >= 0)) {
+//				String number2 = drawcard2.getNumber();
+//				String mark2 = drawcard2.getMark();
+//				System.out.println(number2 + "," + mark2);
+//			}
+//
+//			if ((num3_1 >= 0) && (num3_2 >= 0) && (num3_4 >= 0)) {
+//				String number3 = drawcard3.getNumber();
+//				String mark3 = drawcard3.getMark();
+//				System.out.println(number3 + "," + mark3);
+//			}
+//
+//			if ((num4_1 >= 0) && (num4_2 >= 0) && (num4_3 >= 0)) {
+//				String number4 = drawcard4.getNumber();
+//				String mark4 = drawcard4.getMark();
+//				System.out.println(number4 + "," + mark4);
+//			}
