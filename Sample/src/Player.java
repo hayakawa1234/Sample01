@@ -17,12 +17,13 @@ public class Player {
 	public boolean isOnePair() {
 		for (int i = 0; i < cardList.size(); i++) {
 			Card card = cardList.get(i);
-			boolean result = true;
 			for (int j = 0; j < cardList.size(); j++) {
-				Card anothercard = cardList.get(j);
-				int compare = card.compareTo(anothercard);
-				if (compare == 0) {
-					return true;
+				if (i != j) {
+					Card anothercard = cardList.get(j);
+					int compare = card.compareTo(anothercard);
+					if (compare == 0) {
+						return true;
+					}
 				}
 			}
 		}
