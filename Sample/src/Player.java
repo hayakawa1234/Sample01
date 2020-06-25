@@ -30,8 +30,26 @@ public class Player {
 		return false;
 	}
 
-	public String isTwoPair() {
-		return null;
+	public boolean isTwoPair() {
+		int count = 0;
+		for (int i = 0; i < cardList.size(); i++) {
+			Card card = cardList.get(i);
+			for (int j = 0; j < cardList.size(); j++) {
+				if (i != j) {
+					Card anothercard = cardList.get(j);
+					int compare = card.compareTo(anothercard);
+					if (compare == 0) {
+						count++;
+					}
+
+				}
+			}
+		}
+		if (count == 4) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public int changeCard(int cardIndex) {
