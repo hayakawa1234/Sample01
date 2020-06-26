@@ -1,3 +1,4 @@
+package test;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -214,6 +215,9 @@ public class Exercise {
 			player.addCard(drawcard4);
 			player.addCard(drawcard5);
 			player.isOnePair();
+			if(true) {
+				System.out.println("OnePairです。");
+			}
 		}
 
 		{
@@ -232,6 +236,47 @@ public class Exercise {
 			player.addCard(drawcard4);
 			player.addCard(drawcard5);
 			player.isTwoPair();
+			if(true) {
+				System.out.println("TwoPairです。");
+			}
+		}
+
+		{
+			//テスト設計
+			System.out.println(" ");
+			System.out.println("テスト");
+			System.out.println(" ");
+			System.out.println("1,トランプを引くテスト");
+			System.out.println("まずは1枚引いてみる。");
+			Deck deck = new Deck();
+			Card drawCard = deck.draw();
+			String number = drawCard.getNumber();
+			String mark = drawCard.getMark();
+			System.out.println(number + "," + mark);
+		}
+
+		{
+			System.out.println("");
+			System.out.println("次に半分の27枚を引いてみる");
+			Deck deck = new Deck();
+			for(int i = 0; i < 27; i++) {
+				Card drawCard = deck.draw();
+				String number = drawCard.getNumber();
+				String mark = drawCard.getMark();
+				System.out.println(number + "," + mark);
+			}
+		}
+
+		{
+			System.out.println("");
+			System.out.println("次に54枚引いてみる");
+			Deck deck = new Deck();
+			for(int i = 0; i < deck.size(i); i++) {
+				Card drawCard = deck.draw();
+				String number = drawCard.getNumber();
+				String mark = drawCard.getMark();
+				System.out.println(number + "," + mark);
+			}
 		}
 	}
 }
