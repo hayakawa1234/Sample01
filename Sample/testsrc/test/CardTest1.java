@@ -10,7 +10,7 @@ public class CardTest1 {
 	public void testGetMark() {
 		Card card = new Card(1, "spade");
 		String getMark = card.getMark();
-		assertEquals("spade",getMark);
+		assertEquals("spade", getMark);
 	}
 
 }

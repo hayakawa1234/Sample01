@@ -1,4 +1,5 @@
 package test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
 
 public class Player {
 
+	int count = 0;
 	List<Card> cardList = new ArrayList<Card>();
 
 	public void addCard(Card card) {
@@ -32,7 +34,6 @@ public class Player {
 	}
 
 	public boolean isTwoPair() {
-		int count = 0;
 		for (int i = 0; i < cardList.size(); i++) {
 			Card card = cardList.get(i);
 			for (int j = 0; j < cardList.size(); j++) {
@@ -48,9 +49,13 @@ public class Player {
 		}
 		if (count == 4) {
 			return true;
-		} else {
-			return false;
 		}
+		return false;
+	}
+
+	public boolean isThreeCards() {
+		return true;
+
 	}
 
 	public int changeCard(int cardIndex) {

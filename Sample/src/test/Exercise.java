@@ -223,11 +223,11 @@ public class Exercise {
 		{
 			System.out.println(" ");
 			System.out.println("カードを5枚所持するクラスPlayerを作成して、Playerがカードを5枚所有する。（どうやって所持させるかは自由に）");
-			Card drawcard1 = new Card(6, "dia");
-			Card drawcard2 = new Card(6, "spade");
-			Card drawcard3 = new Card(10, "spade");
-			Card drawcard4 = new Card(12, "heart");
-			Card drawcard5 = new Card(12, "clover");
+			Card drawcard1 = new Card(1, "heart");
+			Card drawcard2 = new Card(3, "spade");
+			Card drawcard3 = new Card(3, "heart");
+			Card drawcard4 = new Card(4, "heart");
+			Card drawcard5 = new Card(1, "spade");
 
 			Player player = new Player();
 			player.addCard(drawcard1);
@@ -243,40 +243,40 @@ public class Exercise {
 
 		{
 			//テスト設計
-			System.out.println(" ");
-			System.out.println("テスト");
-			System.out.println(" ");
-			System.out.println("1,トランプを引くテスト");
-			System.out.println("まずは1枚引いてみる。");
-			Deck deck = new Deck();
-			Card drawCard = deck.draw();
-			String number = drawCard.getNumber();
-			String mark = drawCard.getMark();
-			System.out.println(number + "," + mark);
-		}
-
-		{
-			System.out.println("");
-			System.out.println("次に半分の27枚を引いてみる");
-			Deck deck = new Deck();
-			for(int i = 0; i < 27; i++) {
-				Card drawCard = deck.draw();
-				String number = drawCard.getNumber();
-				String mark = drawCard.getMark();
-				System.out.println(number + "," + mark);
-			}
-		}
-
-		{
-			System.out.println("");
-			System.out.println("次に54枚引いてみる");
-			Deck deck = new Deck();
-			for(int i = 0; i < deck.size(i); i++) {
-				Card drawCard = deck.draw();
-				String number = drawCard.getNumber();
-				String mark = drawCard.getMark();
-				System.out.println(number + "," + mark);
-			}
-		}
+//			System.out.println(" ");
+//			System.out.println("テスト");
+//			System.out.println(" ");
+//			System.out.println("1,トランプを引くテスト");
+//			System.out.println("まずは1枚引いてみる。");
+//			Deck deck = new Deck();
+//			Card drawCard = deck.draw();
+//			String number = drawCard.getNumber();
+//			String mark = drawCard.getMark();
+//			System.out.println(number + "," + mark);
+//		}
+//
+//		{
+//			System.out.println("");
+//			System.out.println("次に半分の27枚を引いてみる");
+//			Deck deck = new Deck();
+//			for(int i = 0; i < 27; i++) {
+//				Card drawCard = deck.draw();
+//				String number = drawCard.getNumber();
+//				String mark = drawCard.getMark();
+//				System.out.println(number + "," + mark);
+//			}
+//		}
+//
+//		{
+//			System.out.println("");
+//			System.out.println("次に54枚引いてみる");
+//			Deck deck = new Deck();
+//			for(int i = 0; i < deck.size(i); i++) {
+//				Card drawCard = deck.draw();
+//				String number = drawCard.getNumber();
+//				String mark = drawCard.getMark();
+//				System.out.println(number + "," + mark);
+//			}
+    	}
 	}
 }
