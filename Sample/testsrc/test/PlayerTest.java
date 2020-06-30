@@ -120,9 +120,9 @@ public class PlayerTest {
 		player.addCard(card3);
 		player.addCard(card4);
 		player.addCard(card5);
-		int changeCardNum = Integer.parseInt(card5.getNumber());
-		int resultCangeCard = player.changeCard(changeCardNum);
-		assertNotSame(changeCardNum, resultCangeCard);
+		int cardNum = Integer.parseInt(card5.getNumber());
+		int ChangeCard = player.changeCard(cardNum);
+		assertNotSame(cardNum, ChangeCard);
 
 	}
 
