@@ -10,7 +10,8 @@ import java.util.List;
 
 public class Player {
 
-	int count = 0;
+	int compareCount = 0;
+	int secondCompareCount = 0;
 	List<Card> cardList = new ArrayList<Card>();
 
 	public void addCard(Card card) {
@@ -41,21 +42,38 @@ public class Player {
 					Card anothercard = cardList.get(j);
 					int compare = card.compareTo(anothercard);
 					if (compare == 0) {
-						count++;
+						compareCount++;
 					}
 
 				}
 			}
 		}
-		if (count == 4) {
+		if (compareCount == 4) {
 			return true;
 		}
 		return false;
 	}
 
 	public boolean isThreeCards() {
-		return true;
+		for (int i = 0; i < cardList.size(); i++) {
+			Card card = cardList.get(i);
+			for (int j = 0; j < cardList.size(); j++) {
+				if (i != j) {
+					Card anothercard = cardList.get(j);
+				}
+				for (int k = 0; k < cardList.size(); k++) {
+					if (i != j && i != k && j != k) {
+						Card secondAnoterCard = cardList.get(k);
+						int secondCompare = card.compareTo(secondAnoterCard);
+						if (secondCompare == 0) {
+							compareCount++;
+						}
+					}
+				}
 
+			}
+		}
+		return false;
 	}
 
 	public int changeCard(int cardIndex) {

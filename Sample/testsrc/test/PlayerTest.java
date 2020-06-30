@@ -95,7 +95,7 @@ public class PlayerTest {
 			var card1 = new Card(1, "heart");
 			var card2 = new Card(3, "spade");
 			var card3 = new Card(3, "heart");
-			var card4 = new Card(4, "heart");
+			var card4 = new Card(3, "clover");
 			var card5 = new Card(1, "spade");
 			player.addCard(card1);
 			player.addCard(card2);
