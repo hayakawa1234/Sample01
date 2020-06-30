@@ -107,4 +107,23 @@ public class PlayerTest {
 
 	}
 
+	@Test
+	public void TestChangeCard() {
+		var player = new Player();
+		var card1 = new Card(1, "heart");
+		var card2 = new Card(2, "heart");
+		var card3 = new Card(3, "heart");
+		var card4 = new Card(4, "heart");
+		var card5 = new Card(5, "heart");
+		player.addCard(card1);
+		player.addCard(card2);
+		player.addCard(card3);
+		player.addCard(card4);
+		player.addCard(card5);
+		int changeCardNum = Integer.parseInt(card5.getNumber());
+		int resultCangeCard = player.changeCard(changeCardNum);
+		assertNotSame(changeCardNum, resultCangeCard);
+
+	}
+
 }
